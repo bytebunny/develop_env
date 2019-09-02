@@ -1,0 +1,3 @@
+[submodule "lib/flint2"]
+	path = lib/flint2
+	url = git://github.com/wbhart/flint2.git
