@@ -1,0 +1,20 @@
+# Ignore everything
+*
+
+# But not these files:
+!*.md
+!*.c
+!*.sh
+!makefile
+!*.gitignore
+!*.pdf
+!*.tex
+!*.bib
+!*.dat
+!*.png
+
+
+# ...even if they are in subdirectories
+!*/
+
+# Specifically ignore:
