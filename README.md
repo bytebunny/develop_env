@@ -10,3 +10,10 @@ C library for doing number theory.
 
 ### [Arb](http://arblib.org)
 C library for rigorous real and complex arithmetic with arbitrary precision
+
+## Testing installation of Arb on MacOS
+On MacOS Mojave, verify that Arb has been successfully installed by compiling and
+running the `test.c` program with additional `-lflint -lmpfr -lgmp -lpthread`
+flags:
+
+`gcc test.c -larb -lflint -lmpfr -lgmp -lpthread`
