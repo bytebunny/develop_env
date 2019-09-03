@@ -13,7 +13,9 @@ C library for rigorous real and complex arithmetic with arbitrary precision
 
 ## Testing installation of Arb on MacOS
 On MacOS Mojave, verify that Arb has been successfully installed by compiling and
-running the `test.c` program with additional `-lflint -lmpfr -lgmp -lpthread`
-flags:
+running the [test program](http://arblib.org/setup.html#running-code) with
+additional `-lflint -lmpfr -lgmp -lpthread` linking flags:
 
-`gcc test.c -larb -lflint -lmpfr -lgmp -lpthread`
+`make test`
+
+`./test`
