@@ -19,3 +19,13 @@ additional `-lflint -lmpfr -lgmp -lpthread` linking flags:
 `make test`
 
 `./test`
+
+## Library check
+On Linux and Mac OS X, to check if library `lib_name` is already installed run:
+
+`find <path/to/search/in> -name \*lib_name\*`
+
+## FLINT configuration
+In order to use the CPU capabilities to the fullest, FLINT should be built 
+using native processor architecture. To this end, additional option should
+be specified in `CFLAGS="-march=native"` of `./configure`.
