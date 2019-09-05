@@ -1,4 +1,6 @@
 CC=gcc
+# Make sure C_INCLUDE_PATH, LD_LIBRARY_PATH and LIBRARY_PATH contain dirs
+# where FLINT and Arb are installed (~/local_<lib_name>)
 LIBS=-larb -lflint -lmpfr -lgmp -lpthread
 # Directory to keep object files:
 ODIR=obj
