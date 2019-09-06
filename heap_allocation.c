@@ -12,4 +12,5 @@ int main()
   printf("%d\n", as[0]);
   
   free(as);
+  as = NULL; // will cause an error to be generated if the pointer is erroneous utilized after the memory has been de-allocated.
 }
