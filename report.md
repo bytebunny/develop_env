@@ -74,7 +74,8 @@ If the allocation fails, it returns NULL.
 The `free()` function takes the pointer returned by `malloc()` and de-allocates the memory.
 No indication of success or failure is returned.
 
-The program does not longer fail for the size that triggered the segmentation fault.
+The program does not fail anymore for the size that triggered the segmentation fault when
+using the stack memory.
 
 
 ## Memory fragmentation
