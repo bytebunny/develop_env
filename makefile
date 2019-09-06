@@ -3,17 +3,22 @@ LIBS=-larb -lflint -lmpfr -lgmp -lpthread
 # Directory to keep object files:
 ODIR=obj
 
-_OBJ = test.o 
+_OBJ = test.o stack_allocation.o 
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 # Rule to generate object files:
 $(ODIR)/%.o: %.c
 	$(CC) -c -o $@ $<
 
-test: $(OBJ)
+all: test stack_allocation
+.PHONY: all
+
+stack_allocation: $(ODIR)/stack_allocation.o
+	$(CC) -o $@ $^ -O1
+
+test: $(ODIR)/test.o
 	$(CC) -o $@ $^ $(LIBS)
 
-.PHONY: clean # Keep make from doing smth with file named clean.
-
+.PHONY: clean # Avoid conflict with a file of the same name
 clean:
-	rm -f $(ODIR)/*.o test
+	rm -f $(ODIR)/*.o test stack_allocation
