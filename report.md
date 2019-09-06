@@ -1,8 +1,6 @@
 [//]: # (To preview markdown file in Emacs type C-c C-c p)
 
-## Stack Allocation
-
-### [Stack vs Heap](http://net-informations.com/faq/net/stack-heap.htm)
+## [Stack vs Heap](http://net-informations.com/faq/net/stack-heap.htm)
 
 **Stack** is used for static memory allocation and **Heap** for dynamic memory allocation,
 both stored in the computer's RAM.
@@ -56,9 +54,13 @@ There is a 3rd type of memory called **static**.
 Static memory persists throughout the entire life of the program, and is usually
 used to store things like global variables, or variables created with the _static_ clause.
 
-### Testing
-The program failed when the size of the array was set to 10e6.
+### Testing stack allocation
+The program failed when the size of the array was set to 10e6, reporting a segmenation
+fault.
 The storage size for `int` is 4 bytes.
 This results in 4 * 10e6 / 1024 / 1024 ~= 38 MB.
 Running `ulimit -s` returns 8192 KB ~= 8 MB, which is smaller than the requested
 amout of memory for allocation.
+
+### Testing heap allocation
+The program does not longer fail for the size that triggered the segmentation fault.
