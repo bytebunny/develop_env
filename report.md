@@ -39,8 +39,8 @@ accesses in the program.
 You can **use heap** if you don't know exactly how much data you will need at runtime
 or if you need to allocate a lot of data.
 This is memory that is not automatically managed (unlike stack) – you have to
-explicitly allocate (using functions such as `malloc`), and deallocate (e.g. `free`)
-the memory.
+explicitly allocate (using functions such as `malloc()`), and deallocate
+(e.g. `free()`) the memory.
 Heap memory requires you to use **pointers** to access it.
 Failure to free the memory when you are finished with it will result in what is
 known as a **memory leak** – memory that is still “being used”, and not available
