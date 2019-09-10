@@ -111,12 +111,16 @@ of contiguous memory:
 **Note when working with double pointers**: `arr[i][j]` is the same as `*(*(arr + i) + j)`.
 
 ## Writing to files
-Note on `[f]scanf`: the input format for strings and numbers is different: `scanf("%s %d", str, &num)`.
+Note on `[f]scanf`: the input format for strings and numbers (or characters) is different:
+`scanf("%s %d", str, &num)`.
 `&` is used to get the address of the variable. 
 C does not have a string type.
 String is just an array of characters and an array variable stores the address of the first index location.
-Thus, there is no need to use the ‘&’ operator to pass the address.
+Thus, there is no need to use the `&` operator to pass the address.
 
+## Parsing command line input
+The conversion from character `c` to integer `a` is performed using `a = c - '0'` because the
+C Standard guarantees each digit in the range '0'..'9' is one greater than its previous digit.
 
 ## References
 1. [Differences between Stack and Heap](http://net-informations.com/faq/net/stack-heap.htm)
