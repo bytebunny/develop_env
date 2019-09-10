@@ -108,9 +108,19 @@ On the contrary, the 2nd pattern (see `avoid_memory_fragmentation.c`) allocates 
 of contiguous memory:
 ![avoid memory fragmentation](./img/avoid_memory_fragmentation.png)
 
+**Note when working with double pointers**: `arr[i][j]` is the same as `*(*(arr + i) + j)`.
+
+## Writing to files
+Note on `[f]scanf`: the input format for strings and numbers is different: `scanf("%s %d", str, &num)`.
+`&` is used to get the address of the variable. 
+C does not have a string type.
+String is just an array of characters and an array variable stores the address of the first index location.
+Thus, there is no need to use the ‘&’ operator to pass the address.
+
 
 ## References
 1. [Differences between Stack and Heap](http://net-informations.com/faq/net/stack-heap.htm)
 1. [MEMORY IN C – THE STACK, THE HEAP, AND STATIC](https://craftofcoding.wordpress.com/2015/12/07/memory-in-c-the-stack-the-heap-and-static/)
 1. [Dynamic Memory Allocation and Fragmentation in C and C++](https://www.design-reuse.com/articles/25090/dynamic-memory-allocation-fragmentation-c.html)
 1. [Preventing Memory Fragmentation](http://www.devx.com/tips/Tip/14060)
+1. [Why “&” is not used for strings in scanf() function?](https://www.geeksforgeeks.org/not-used-strings-scanf-function/)

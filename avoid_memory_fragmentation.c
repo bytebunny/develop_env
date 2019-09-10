@@ -12,7 +12,7 @@ int main()
   
   for ( size_t ix = 0; ix < SIZE; ++ix )
     for ( size_t jx = 0; jx < SIZE; ++jx )
-      as[ix][jx] = 0;
+      as[ix][jx] = 0; // as[ix][jx] is the same as *(*(as+ix)+jx) 
   
   printf("%d\n", as[0][0]);
   
